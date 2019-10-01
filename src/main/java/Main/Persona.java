@@ -6,7 +6,7 @@ package Main;
 import java.util.Date;
 
 /**
- * @author SebastiÃ¡n Sanchez y Matias Vega
+ * @author Sebastián Sanchez y Matias Vega
  */
 public class Persona {
 

@@ -3,13 +3,16 @@
  */
 package Main;
 
+import java.text.DateFormat;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.Date;
 import java.util.GregorianCalendar;
 
 /**
- * @author SebastiÃ¡n Sanchez y Matias Vega
+ * @author Sebastián Sanchez y Matias Vega
  */
 public class Programa {
 
@@ -32,12 +35,25 @@ public class Programa {
 
     /**
      * Metodo de tipo int que se encarga de comparar la hora del sistema con la hora asignada a cada persona y hace
+     * @param persona 
+     * @return 
      */
-
-    public static int compararHora() {
-        int hora = 0;
-
-        return hora;
+     public static int compararHora(Persona persona){
+        String horaInicial="09:00";
+        int diferencia=0;
+        try{
+            DateFormat dateF= new SimpleDateFormat("HH:mm");
+            Date horaIni= dateF.parse(horaInicial);
+            if(horaIni.compareTo(persona.getHoraDeAtencion())>15){
+                diferencia=0;
+            }
+        }catch(ParseException e){
+            System.out.println("Ocurrio un error");
+        }
+        
+        
+        persona.getHoraDeAtencion();  
+        return diferencia;
     }
     /**
      * Metodo de tipo void que envia un mensaje al cumplirse cierta condicion
@@ -52,7 +68,7 @@ public class Programa {
      * @param persona es un objeto del Arraylist usuarios
      * */
     public static void eliminarUsuario(Persona persona) {
-        if (compararHora() == 0) {
+        if (compararHora(persona) == 0) {
             usuarios.remove(persona);
         }
     }
