@@ -14,8 +14,9 @@ import java.util.Date;
 public class Main {
 
     public static void main(String[] args) {
-
-
+        Programa menu= new Programa();
+        menu.correrPrograma();
+        
     }
 
 }

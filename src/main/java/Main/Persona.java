@@ -25,6 +25,10 @@ public class Persona {
         this.horaDeAtencion = horaDeAtencion;
     }
 
+    public Persona() {
+    }
+
+    
     /**
      * Metodo de tipo String que permite obtener el atributo nombre para cada persona
      *
